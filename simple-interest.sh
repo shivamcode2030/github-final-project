@@ -1,5 +1,5 @@
 #!/bin/bash
-# Calculate simple interest using user-provided values.
+# Calculate simple interest using principal, rate, and time.
 
 echo "Enter the principal:"
 read p
