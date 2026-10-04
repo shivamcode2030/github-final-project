@@ -1,16 +1,23 @@
 # Introduction to Git and GitHub
 
+## Project Name
+
+Introduction to Git and GitHub
+
+## Project Details
+
+This project demonstrates essential Git and GitHub workflows, including repository forking, branching, commits, merging, pull requests, and reverting changes.
+
 ## Simple Interest Calculator
 
-A calculator that calculates simple interest given principal, annual rate of interest and time period in years.
+A Bash script that calculates simple interest using principal, annual rate of interest, and time period.
 
-```
-Input:
-   p, principal amount
-   t, time period in years
-   r, annual rate of interest
-Output
-   simple interest = p*t*r
-```
+## Technologies
 
-_© 2022 XYZ, Inc._
+- Git
+- GitHub
+- Bash
+
+## Author
+
+Shivam Angral
