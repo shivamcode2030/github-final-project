@@ -12,7 +12,7 @@ This project demonstrates essential Git and GitHub workflows, including reposito
 
 A Bash script that calculates simple interest using principal, annual rate of interest, and time period.
 
-## Technologies
+## Technologies Used
 
 - Git
 - GitHub
