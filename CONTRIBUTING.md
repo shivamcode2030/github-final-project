@@ -11,3 +11,7 @@ All contributions, bug reports, bug fixes, documentation improvements, enhanceme
 5. Commit your changes with a clear message.
 6. Push your branch to GitHub.
 7. Open a pull request.
+
+## Pull Request Guidelines
+
+Please keep pull requests focused and clearly describe the changes made.
