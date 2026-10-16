@@ -36,3 +36,10 @@ npm run dev
 ## Build
 
 npm run build
+
+
+## GitHub Pages Deployment
+
+The repository includes a ready-to-publish docs directory. In GitHub, open Settings > Pages, choose Deploy from a branch, select main and the /docs folder, and save. The application will then be available at:
+
+https://shivamcode2030.github.io/github-final-project/
