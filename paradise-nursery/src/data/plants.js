@@ -21,7 +21,7 @@ export const plantCategories = [
       { id: 8, name: "Chinese Evergreen", price: 849, image: "https://images.unsplash.com/photo-1572688484438-313a2a4b2c42?auto=format&fit=crop&w=800&q=80", description: "Patterned leaves with a relaxed tropical look." },
       { id: 9, name: "Parlor Palm", price: 999, image: "https://images.unsplash.com/photo-1597055181300-d3f5aa195c9f?auto=format&fit=crop&w=800&q=80", description: "Soft fronds that add a peaceful feel indoors." },
       { id: 10, name: "Calathea", price: 1049, image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=800&q=80", description: "Decorative foliage with striking natural patterns." },
-      { id: 11, name: "Philodendron", price: 899, image: "https://images.unsplash.com/photo-1614595034684-9bfe-9f55b218?auto=format&fit=crop&w=800&q=80", description: "A forgiving trailing plant for shelves and desks." },
+      { id: 11, name: "Philodendron", price: 899, image: "https://images.unsplash.com/photo-1614595034684-9bfe9f55b218?auto=format&fit=crop&w=800&q=80", description: "A forgiving trailing plant for shelves and desks." },
       { id: 12, name: "Lucky Bamboo", price: 549, image: "https://images.unsplash.com/photo-1593482892290-f54927ae2fa5?auto=format&fit=crop&w=800&q=80", description: "Compact greenery with a simple calming silhouette." }
     ]
   },
@@ -32,7 +32,7 @@ export const plantCategories = [
     products: [
       { id: 13, name: "Monstera Deliciosa", price: 1299, image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=800&q=80", description: "Iconic split leaves that bring instant tropical character." },
       { id: 14, name: "Bird of Paradise", price: 1499, image: "https://images.unsplash.com/photo-1597055181300-d3f5aa195c9f?auto=format&fit=crop&w=800&q=80", description: "Large sculptural leaves for a bold indoor display." },
-      { id: 15, name: "Alocasia", price: 1199, image: "https://images.unsplash.com/photo-1614595034684-9bfe-9f55b218?auto=format&fit=crop&w=800&q=80", description: "Arrow-shaped leaves with dramatic tropical presence." },
+      { id: 15, name: "Alocasia", price: 1199, image: "https://images.unsplash.com/photo-1614595034684-9bfe9f55b218?auto=format&fit=crop&w=800&q=80", description: "Arrow-shaped leaves with dramatic tropical presence." },
       { id: 16, name: "Fiddle Leaf Fig", price: 1399, image: "https://images.unsplash.com/photo-1593691509543-c55fb32a2e1?auto=format&fit=crop&w=800&q=80", description: "Large violin-shaped leaves for bright interiors." },
       { id: 17, name: "Anthurium", price: 999, image: "https://images.unsplash.com/photo-1572688484438-313a2a4b2c42?auto=format&fit=crop&w=800&q=80", description: "Glossy green foliage with vibrant heart-shaped blooms." },
       { id: 18, name: "Bromeliad", price: 1099, image: "https://images.unsplash.com/photo-1593482892290-f54927ae2fa5?auto=format&fit=crop&w=800&q=80", description: "Colorful tropical foliage that brightens any room." }
