@@ -1,45 +1,46 @@
-# Paradise Nursery Shopping Application
+# Emotion Detector
 
-Paradise Nursery is a React and Redux shopping cart application for an online houseplant store.
+## IBM Watson NLP Emotion Detection Application
 
-## Project Details
+This repository contains the final project for the IBM/Coursera course **Developing AI Applications with Python and Flask**.
 
-The application includes a landing page, a product listing page, and a shopping cart page. It demonstrates React components, React Router navigation, Redux state management, dynamic cart totals, quantity controls, and a GitHub Pages deployment workflow.
+The application uses the IBM Watson NLP EmotionPredict service to detect five emotions:
 
-## Main Features
+- anger
+- disgust
+- fear
+- joy
+- sadness
 
-- Paradise Nursery landing page with a background image and company introduction
-- Get Started button linking to the plant listing page
-- Three plant categories with six unique houseplants in each category
-- Plant thumbnails, names, prices, and descriptions
-- Add to Cart buttons that become disabled after a plant is added
-- Dynamic cart count in the navbar
-- Home, Plants, and Cart navigation on the shopping pages
-- Redux reducers: addItem(), removeItem(), updateQuantity()
-- Increase, decrease, and delete cart controls
-- Per-item totals, total plant count, and total cart amount
-- Checkout button with a Coming Soon message
-- Continue Shopping button
-- GitHub Pages deployment workflow
+It also identifies the dominant emotion, exposes the detector through a Flask web application, handles blank or invalid input, includes unit tests, and is prepared for static code analysis with Pylint.
 
-## Project Location
+## Project structure
 
-The React application source is stored in the paradise-nursery directory.
+    EmotionDetection/
+        __init__.py
+        emotion_detection.py
+    static/
+        mywebscript.js
+        style.css
+    templates/
+        index.html
+    server.py
+    test_emotion_detection.py
+    requirements.txt
 
-## Run Locally
+## Run the application
 
-Open a terminal in the paradise-nursery directory and run:
+    pip install -r requirements.txt
+    python server.py
 
-npm install
-npm run dev
+Then open:
 
-## Build
+    http://localhost:5000/
 
-npm run build
+## Run unit tests
 
+    python -m unittest test_emotion_detection.py -v
 
-## GitHub Pages Deployment
+## Run static code analysis
 
-The repository includes a ready-to-publish docs directory. In GitHub, open Settings > Pages, choose Deploy from a branch, select main and the /docs folder, and save. The application will then be available at:
-
-https://shivamcode2030.github.io/github-final-project/
+    pylint server.py
