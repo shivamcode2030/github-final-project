@@ -1,4 +1,6 @@
-# Emotion Detector
+# NLP - Emotion Detection
+
+## Emotion Detector
 
 ## IBM Watson NLP Emotion Detection Application
 
