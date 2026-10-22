@@ -1,5 +1,8 @@
 """Flask web server for the Watson NLP Emotion Detector."""
 
+# Flask's application object is conventionally named `app`.
+# pylint: disable=invalid-name
+
 from flask import Flask, render_template, request
 
 from EmotionDetection.emotion_detection import emotion_detector
