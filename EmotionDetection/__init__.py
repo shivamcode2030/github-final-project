@@ -1,1 +1,5 @@
-from .emotion_detection import emotion_detector
+"""EmotionDetection package."""
+
+from . import emotion_detection
+
+__all__ = ["emotion_detection"]
