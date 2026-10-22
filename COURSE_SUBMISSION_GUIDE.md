@@ -1,81 +1,154 @@
-# Coursera Submission Guide
+# Coursera Final Project — Emotion Detector Submission Guide
 
-Use the files in this repository as the source for the Coursera final project submission.
+Repository:
+https://github.com/shivamcode2030/github-final-project
 
-## Task 1
-README URL:
+## Task 1 — README.md URL
 
+Submit:
 https://github.com/shivamcode2030/github-final-project/blob/main/README.md
 
-## Task 2
-Activity 1: submit the code from:
-EmotionDetection/emotion_detection.py
+## Task 2 — Watson NLP emotion detection
 
-Activity 2: run in the lab:
+### Activity 1
+Submit the code from:
+https://github.com/shivamcode2030/github-final-project/blob/main/EmotionDetection/emotion_detection.py
 
-python3
-from EmotionDetection.emotion_detection import emotion_detector
-emotion_detector("I love this new technology")
+The key function is `emotion_detector(text_to_analyze)`. It sends the text to the Watson NLP EmotionPredict service and extracts the five emotion scores.
 
-Save the terminal output.
+### Activity 2
+Run this in the Cloud IDE/lab:
 
-## Task 3
-Activity 1: submit the updated emotion_detector function from:
-EmotionDetection/emotion_detection.py
+    python3
 
-Activity 2: run:
+Then:
 
-python3
-from EmotionDetection.emotion_detection import emotion_detector
-emotion_detector("I am glad this happened")
+    from EmotionDetection.emotion_detection import emotion_detector
+    emotion_detector("I love this new technology")
 
-Save the terminal output showing the five emotion scores and dominant_emotion.
+Save and submit the actual terminal output from your environment. Do not invent the score values.
 
-## Task 4
-Activity 1: __init__.py URL:
+## Task 3 — Output formatting
+
+### Activity 1
+Submit the updated `emotion_detector` function from:
+https://github.com/shivamcode2030/github-final-project/blob/main/EmotionDetection/emotion_detection.py
+
+It returns:
+`anger`, `disgust`, `fear`, `joy`, `sadness`, and `dominant_emotion`.
+
+### Activity 2
+Run:
+
+    python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am glad this happened'))"
+
+Save the actual output.
+
+## Task 4 — Package validation
+
+### Activity 1
+Submit this public URL:
 
 https://github.com/shivamcode2030/github-final-project/blob/main/EmotionDetection/__init__.py
 
-Activity 2: run:
+The package initializer imports the application module.
 
-python3 -c "from EmotionDetection import emotion_detector; print(emotion_detector('I am happy'))"
+### Activity 2
+Run:
 
-Save the successful terminal output.
+    python3 -c "from EmotionDetection import emotion_detection; print('EmotionDetection package is valid')"
 
-## Task 5
-Activity 1: submit:
-test_emotion_detection.py
+Save the terminal output.
 
-Activity 2: run:
+## Task 5 — Unit tests
 
-python -m unittest test_emotion_detection.py -v
+### Activity 1
+Submit the code from:
 
-Save the terminal output showing all tests passed.
+https://github.com/shivamcode2030/github-final-project/blob/main/test_emotion_detection.py
 
-## Task 6
-Activity 1: submit:
-server.py
+### Activity 2
+Run:
 
-Activity 2: start the server:
+    python3 -m unittest test_emotion_detection.py -v
 
-python server.py
+Submit the actual terminal output showing all five tests passed.
 
-Open http://localhost:5000/ and capture the successful emotion-detection interface in the required screenshot.
+## Task 6 — Flask deployment
 
-## Task 7
-Activity 1: submit the updated emotion_detector function showing HTTP 400 handling.
+### Activity 1
+Submit the code from:
 
-Activity 2: submit the server.py section that rejects blank input.
+https://github.com/shivamcode2030/github-final-project/blob/main/server.py
 
-Activity 3: enter a blank input in the browser and capture the required error-handling screenshot.
+### Activity 2
+Start the application:
 
-## Task 8
-Activity 1: submit server.py.
+    python3 server.py
 
-Activity 2: run:
+Open:
 
-pylint server.py
+    http://localhost:5000/
 
-Save the terminal output showing:
+Enter:
 
-Your code has been rated at 10.00/10
+    I am glad this happened
+
+Click **Analyze Emotion** and capture the required screenshot as `6b_deployment_test.png`.
+
+## Task 7 — Error handling
+
+### Activity 1
+Submit the updated `emotion_detector` function from:
+
+https://github.com/shivamcode2030/github-final-project/blob/main/EmotionDetection/emotion_detection.py
+
+It handles HTTP 400 responses by returning all emotion values and `dominant_emotion` as `None`.
+
+### Activity 2
+Submit the relevant `server.py` section:
+
+    text_to_analyze = request.args.get("textToAnalyze")
+
+    if text_to_analyze is None or not text_to_analyze.strip():
+        return "Invalid text! Please try again!", 400
+
+    response = emotion_detector(text_to_analyze)
+
+    if response.get("dominant_emotion") is None:
+        return "Invalid text! Please try again!", 400
+
+### Activity 3
+In the browser at:
+
+    http://localhost:5000/
+
+leave the text box blank and click **Analyze Emotion**.
+
+Capture the actual interface showing:
+
+    Invalid text! Please try again!
+
+Save it as `7c_error_handling_interface.png`.
+
+## Task 8 — Static code analysis
+
+### Activity 1
+Submit the code from:
+
+https://github.com/shivamcode2030/github-final-project/blob/main/server.py
+
+### Activity 2
+Run:
+
+    pylint server.py
+
+Submit the actual terminal output showing:
+
+    Your code has been rated at 10.00/10
+
+Only submit a 10.00/10 result after running Pylint in the course environment.
+
+## Important
+
+The GitHub repository and source files are prepared for the assignment. The terminal outputs and screenshots must be captured from your own Cloud IDE/lab session because they depend on the live Watson NLP service and running Flask application.
